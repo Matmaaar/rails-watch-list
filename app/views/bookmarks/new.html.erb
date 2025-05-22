@@ -1,0 +1,10 @@
+New Bookmark
+<%= simple_form_for([@list, @bookmark]) do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.submit %>
+<% end %>
+
+
+
+  <%# <%= f.input :list, :as => :hidden, :input_html => { :value => params[:list_id] } %>

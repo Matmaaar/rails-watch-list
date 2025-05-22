@@ -1,0 +1,25 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container text-center">
+    <h1>My movie lists</h1>
+
+  </div>
+</div>
+
+<h2 class="p-3">My lists</h2>
+<div class="cards">
+<%@lists.each do |list| %>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+     <%= link_to list.name, list_path(list), class: "text-decoration-none" %>
+</div>
+<% end %>
+</div>
+
+
+<a><%= link_to "Create New list", new_list_path, class: "text-decoration-none btn btn-success m-3" %></a>
+
+
+ <%# <%= link_to "Delete",restaurant_path(restaurant),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "text-decoration-none"
+%>
